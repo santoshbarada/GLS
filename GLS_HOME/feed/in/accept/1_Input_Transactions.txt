@@ -1,0 +1,74 @@
+[
+   {
+	  "TransactionId": 1,
+	  "Instrument": "IBM",
+	  "TransactionType": "B",
+	  "TransactionQuantity": 1000
+   },
+   {
+	  "TransactionId": 2,
+	  "Instrument": "APPL",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 200
+   },
+   {
+	  "TransactionId": 3,
+	  "Instrument": "AMZN",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 5000
+   },
+   {
+	  "TransactionId": 4,
+	  "Instrument": "MSFT",
+	  "TransactionType": "B",
+	  "TransactionQuantity": 50
+   },
+   {
+	  "TransactionId": 5,
+	  "Instrument": "APPL",
+	  "TransactionType": "B",
+	  "TransactionQuantity": 100
+   },
+   {
+	  "TransactionId": 6,
+	  "Instrument": "APPL",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 20000
+   },
+   {
+	  "TransactionId": 7,
+	  "Instrument": "AMZN",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 5000
+   },
+   {
+	  "TransactionId": 8,
+	  "Instrument": "MSFT",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 300
+   },
+   {
+	  "TransactionId": 9,
+	  "Instrument": "AMZN",
+	  "TransactionType": "B",
+	  "TransactionQuantity": 200
+   },
+   {
+	  "TransactionId": 10,
+	  "Instrument": "APPL",
+	  "TransactionType": "B",
+	  "TransactionQuantity": 9000
+   },
+   {
+	  "TransactionId": 11,
+	  "Instrument": "AMZN",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 5000
+   },
+   {
+	  "TransactionId": 12,
+	  "Instrument": "AMZN",
+	  "TransactionType": "S",
+	  "TransactionQuantity": 50
+   }
+]

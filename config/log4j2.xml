@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ author  Santosh Barada
+ description : Log4j2 Configuration file. 
+-->
+
+<Configuration monitorInterval="5" status="WARN">
+
+	<Properties>
+		<Property name="gls.LogFile.Path">D:/KeplerWorkSpace/GLS/GLS_HOME/logs</Property>
+		<Property name="gls.AlertFile.Path">D:/KeplerWorkSpace/GLS/GLS_HOME/alert</Property>
+		<Property name="gls.LogFile.Size">10MB</Property>
+		<Property name="gls.LogFile.MaxBackupIndex">20</Property>
+		<Property name="gls.LogFile.RootLogLevel">DEBUG</Property>
+		<Property name="gls.LogFile.PreDefinedLoggersLevel">DEBUG</Property>
+	</Properties>
+	
+	<Appenders>
+		<RollingFile name="GLSProductLogger" append="true"
+				fileName="${sys:gls.LogFile.Path}/GLSProductLogger.log" 
+				filePattern="${sys:gls.LogFile.Path}/GLSProductLogger-%i.log">
+			<PatternLayout pattern="%d | %5p | [%t] | %c:%M(%L) | %m %n"/>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="${sys:gls.LogFile.Size}"/>
+			</Policies>
+			<DefaultRolloverStrategy fileIndex="min" max="${sys:gls.LogFile.MaxBackupIndex}"/>
+		</RollingFile>
+		<RollingFile name="GLSAlert" append="true"
+				fileName="${sys:gls.AlertFile.Path}/GLSAlert.txt" 
+				filePattern="${sys:gls.AlertFile.Path}/GLSAlert-%i.txt">
+			<PatternLayout pattern="[%d] | %m %n"/>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="${sys:gls.LogFile.Size}"/>
+			</Policies>
+			<DefaultRolloverStrategy fileIndex="min" max="${sys:gls.LogFile.MaxBackupIndex}"/>
+		</RollingFile>
+	</Appenders>
+
+
+
+	<Loggers>
+		<Logger name="com.abcib.gls.alert" level="${sys:gls.LogFile.RootLogLevel}" additivity="false"> 
+			<AppenderRef ref="GLSAlert" level="${sys:gls.LogFile.RootLogLevel}" />
+		</Logger>
+		<Logger name="com.abcib.gls" level="${sys:gls.LogFile.RootLogLevel}" additivity="false"> 
+			<AppenderRef ref="GLSProductLogger" level="${sys:gls.LogFile.RootLogLevel}" />
+		</Logger>
+		<Root level="${sys:gls.LogFile.RootLogLevel}">
+			<AppenderRef ref="GLSProductLogger"/>
+		</Root>
+	</Loggers>
+
+ 
+</Configuration>
