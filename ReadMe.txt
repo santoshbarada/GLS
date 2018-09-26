@@ -6,11 +6,13 @@
 	1.2 Copy sources to src directory of project
 	1.3 Copy config sources to root directory of project
 
-2. Configure Application Home
+2. Configure Application
 	2.1 Create Application Directory Structures as mentioned below in root directory of project
 	2.2 Create GLS_HOME and its sub directories in root directory of project
 	2.3 Copy DB files(*.xlsx) files to GLS_HOME>exceldb directory
-
+	2.4 Add config directory into project classpath
+	2.5 Add below mentioned depend jar files into project classpath 		
+	
 3. Run Application
 	3.1 Open GLSApp.java in Eclipse
 	3.2 Go to Run and Run java file as Java Application
