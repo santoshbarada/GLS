@@ -12,6 +12,9 @@ General Ledger System(GLS)
 	2.1 Create Application Directory Structures as mentioned below in root directory of project
 	2.2 Create GLS_HOME and its sub directories in root directory of project
 	2.3 Copy DB files(*.xlsx) files to GLS_HOME>exceldb directory
+	2.4 Add config directory into project classpath
+	2.5 Add below mentioned depend jar files into project classpath 		
+	
 
 3. Run Application
 	3.1 Open GLSApp.java in Eclipse
